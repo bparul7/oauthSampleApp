@@ -13,9 +13,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 const oauthRoutes = require ('./routes/oauthRoutes');
 const userRoutes = require ('./routes/userRoutes');
+const crudRoutes = require ('./routes/crudRoutes');
 
 app.use ('/oauth', oauthRoutes);
 app.use ('/', userRoutes);
+app.use ('/', crudRoutes);
 
 app.listen(
 	port, 
